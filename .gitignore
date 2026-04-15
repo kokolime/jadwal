@@ -1,0 +1,17 @@
+# Abaikan konfigurasi database lokal (Sangat Penting!)
+db_connect.php
+
+# Abaikan file sistem operasi
+.DS_Store
+Thumbs.db
+
+# Abaikan folder temporary dari text editor (VS Code / Sublime)
+.vscode/
+.idea/
+*.swp
+
+# Jika Anda nanti menggunakan library eksternal (Composer)
+/vendor/
+
+# Abaikan file log
+*.log
