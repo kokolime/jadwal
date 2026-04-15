@@ -1,17 +1,16 @@
-# Abaikan konfigurasi database lokal (Sangat Penting!)
-db_connect.php
+<?php
+// Konfigurasi Database
+$host     = "localhost";
+$username = "root";         // Username default XAMPP
+$password = "";             // Password default XAMPP (kosong)
+$database = "jadwal";
 
-# Abaikan file sistem operasi
-.DS_Store
-Thumbs.db
-
-# Abaikan folder temporary dari text editor (VS Code / Sublime)
-.vscode/
-.idea/
-*.swp
-
-# Jika Anda nanti menggunakan library eksternal (Composer)
-/vendor/
-
-# Abaikan file log
-*.log
+// Membuat Koneksi
+$conn = mysqli_connect($host, $username, $password, $database);
+// Cek Koneksi
+if (!$conn) {
+    die("Koneksi gagal: " . mysqli_connect_error());
+}
+// Set charset ke utf8 agar karakter khusus terbaca dengan baik
+mysqli_set_charset($conn, "utf8");
+?>
